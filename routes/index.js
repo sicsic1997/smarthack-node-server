@@ -8,6 +8,11 @@ router.get('/get-experience', function(req, res, next) {
   res.send({"experience-sets": loadExperiences()});
 });
 
+router.get('/', function(req, res, next) {
+  res.send("HAHAHA");
+});
+
+
 router.post('/save-experience', function(req, res, next) {
   var name = writeToFile(req.body["name"], req.body["experienceChangeSet"]);
   res.send({'filename': name});
