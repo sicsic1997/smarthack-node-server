@@ -8,6 +8,11 @@ router.get('/get-experience', function(req, res, next) {
   res.send({"experience-sets": loadExperiences()});
 });
 
+router.get('/get-single-experience', function(req, res, next) {
+  res.send({"experience-sets": loadExperiences()});
+});
+
+
 router.get('/', function(req, res, next) {
   res.send("HAHAHA");
 });
